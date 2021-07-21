@@ -6,6 +6,7 @@ Pr-requisites:
 
     Working IRAF installed
     Working Astrometry.net installed with appropriate index files
+    Working DS9 tool for image visualization 
 
 Important input files:
 A) "numfile" or change the name in the main code as applicable - ASCII format
@@ -61,4 +62,17 @@ D) "cmds" : ASCII file containng one line for executing a command to edit header
 
     jd=julday(@'date-obs',ut-5.5+(exposure/2+13.5)/3600)
 
-Main Script Name :
+Main Script Name : "sc_miroOptPhotIRAF.cl"
+
+How to use it: 
+
+Keep all the files in your workig directory.
+Open the script and change the paths as applicable
+Enter to the IRAF environment 
+e.g., by 
+> cl
+cl >
+load improc, imred, ccdproc, ccdred, noao to your working environment
+noao> @sc_miroOptPhotIRAF.cl 
+
+The script shall work fine and display interim products in between...
