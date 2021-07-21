@@ -1,0 +1,1 @@
+jd=julday(@'date-obs',ut-5.5+(exposure/2+13.5)/3600)
